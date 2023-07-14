@@ -1,2 +1,2 @@
 # Strange-Network
-The anonymous network
+The anonymous network(Working Only on Desktop)
