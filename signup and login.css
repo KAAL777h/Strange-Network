@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700;800;900&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --clr: #0ab3ff;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #1c2630;
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 8%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo{
+    font-size:25px;
+    color: white;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+.logoblue{
+    font-size:25px;
+    color: #0ab3ff;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+.navbar a{
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-block;
+    margin: 0 20px;
+    transition: 0.2s;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: calc(.1s * var(--i));
+}
+.navbar a:hover{
+    color: #0ab3ff;
+}
+.social-media{
+    width: 155px;
+    height: 40px;
+    background: transparent;
+}
+.social-media a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background:transparent;
+    border: 2px solid transparent;
+    text-decoration: none;
+    transform: rotate(45deg);
+    margin: 4;
+    transition: 0.5s;
+    opacity: 0;
+    animation: slideSci 1s ease forwards;
+    animation-delay: calc(.1s * var(--i));
+}
+.social-media a:hover{
+    border-color: #0ab3ff;
+}
+.social-media a i{
+    font-size: 24px;
+    color: white;
+    transform: rotate(-45deg);
+}
+form {
+    background: #29313c;
+    padding: 60px 80px 60px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+form h2 {
+    color: #fff;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 1.25em;
+    letter-spacing: 0.1em;
+    margin-bottom: 50px;
+}
+
+.inputbox {
+    position: relative;
+    width: 300px;
+    margin-bottom: 40px;
+}
+
+.inputbox input {
+    position: relative;
+    width: 100%;
+    padding: 10px 0;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #999;
+    outline: none;
+    color: #fff;
+    font-size: 1em;
+    letter-spacing: 0.15em;
+}
+
+.inputbox label {
+    position: absolute;
+    left: 0;
+    padding: 10px 0;
+    pointer-events: none;
+    color: #999;
+    text-transform: uppercase;
+}
+
+.inputbox label span {
+    position: relative;
+    display: inline-flex;
+    letter-spacing: 0.05em;
+    transition: 0.2s ease-in-out;
+}
+
+.inputbox input:focus~label span,
+.inputbox input:valid~label span {
+    color: var(--clr);
+    letter-spacing: 0.15em;
+    transform: translateY(-25px);
+}
+
+.inputbox input:focus,
+.inputbox input:valid {
+    border-bottom: 2px solid var(--clr);
+}
+
+.inputbox input[type="submit"] {
+    background: var(--clr);
+    border: none;
+    padding: 15px;
+    border-radius: 50px;
+    color: #1c2630;
+    font-weight: 500;
+    font-size: 1.15em;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.inputbox input[type="submit"]:hover {
+    letter-spacing: 0.35em;
+}
+
+form p {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+form p a {
+    color: var(--clr);
+    font-weight: 500;
+    text-decoration: none;
+}
+@keyframes slideRight {
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes slideTop{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes slideSci{
+    0%{
+        transform: translateX(100px) rotate(45deg);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0) rotate(45deg);
+        opacity: 1;
+    }
+}
